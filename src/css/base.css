@@ -108,6 +108,10 @@
   color: unset;
 }
 
+:where(em) {
+  font-style: normal;
+}
+
 summary::-webkit-details-marker {
   display: none;
 }
