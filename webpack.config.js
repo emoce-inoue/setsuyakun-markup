@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -16,6 +17,12 @@ module.exports = {
     },
     hot: true,
     open: true,
+    watchFiles: {
+      paths: ['src/index.html'],
+      options: {
+        usePolling: true,
+      },
+    },
   },
   module: {
     rules: [
@@ -45,6 +52,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: 'body',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'src/images', to: 'images' }],
     }),
   ],
 };
