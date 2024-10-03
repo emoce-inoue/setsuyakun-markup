@@ -40,6 +40,13 @@ module.exports = {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
+      {
+        test: /\.(png|jpg|gif|webp|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]',
+        },
+      },
     ],
   },
   resolve: {
@@ -52,6 +59,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: 'body',
+      minify: false,
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: 'src/images', to: 'images' }],
