@@ -1,7 +1,7 @@
 :root {
   /* font */
   --font-sans: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', meiryo, sans-serif;
-  --font-Thai-Looped: 'Noto Sans Thai Looped', sans-serif;
+  --font-thai-looped: 'Noto Sans Thai Looped', sans-serif;
   --base-text-unit: 16;
   --rem-ratio: calc(1rem / var(--base-text-unit));
   --font-normal: 400;
