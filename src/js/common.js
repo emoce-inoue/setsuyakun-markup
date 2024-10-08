@@ -1,7 +1,37 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const targetElems = document.querySelectorAll('.js-count-number');
-  const from = 0;
+import { getAverageAnnualPremium, getAnnualPremium } from './price.js';
 
+document.addEventListener('DOMContentLoaded', () => {
+  // シミュレーション
+  const ageElem = document.querySelector('[data-age]');
+  const genderElem = document.querySelector('[data-gender]');
+  const averageAnnualPremiumElem = document.querySelector('.js-average-annual-premium');
+  const annualPremiumElem = document.querySelector('.js-annual-premium');
+  const countUpElems = document.querySelectorAll('.js-count-number');
+  // 年齢-性別
+  const age = parseInt(ageElem.getAttribute('data-age'), 10);
+  const gender = genderElem.getAttribute('data-gender');
+  // 平均年間保険料
+  const averageAnnualPremiumValue = getAverageAnnualPremium(age, gender);
+  // 年間保険料
+  const annualPremiumValue = getAnnualPremium(age, gender);
+  // 節約額
+  const savingAmount = averageAnnualPremiumValue - annualPremiumValue;
+  // 月々の節約額
+  const monthlySavingAmount = savingAmount / 12;
+
+  averageAnnualPremiumElem.textContent = averageAnnualPremiumValue.toLocaleString();
+  annualPremiumElem.textContent = annualPremiumValue.toLocaleString();
+  // 各カウントアップ要素に対応する「data-count-to」を設定
+  countUpElems.forEach(targetElem => {
+    if (targetElem.classList.contains('js-saving-amount')) {
+      targetElem.setAttribute('data-count-to', savingAmount);
+    } else if (targetElem.classList.contains('js-monthly-saving-amount')) {
+      targetElem.setAttribute('data-count-to', monthlySavingAmount);
+    }
+  });
+
+  // カウントアップ
+  const from = 0;
   const startCountUp = (targetElem, to, duration) => {
     const startTime = performance.now();
     const countUp = () => {
@@ -29,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  targetElems.forEach(targetElem => {
+  countUpElems.forEach(targetElem => {
     countUpObserver.observe(targetElem);
   });
 });
