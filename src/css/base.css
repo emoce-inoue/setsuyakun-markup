@@ -1,5 +1,3 @@
-@import url('./variables.css');
-
 * {
   box-sizing: border-box;
   min-inline-size: 0;
@@ -13,7 +11,7 @@
   font-family: var(--font-sans);
   font-style: unset;
   font-size: 100%;
-  font-weight: 500;
+  font-weight: var(--font-bold);
   font-feature-settings: 'pkna';
   text-align: start;
   letter-spacing: var(--tracking-normal);
@@ -106,6 +104,10 @@
   padding: unset;
   background-color: unset;
   color: unset;
+}
+
+:where(em) {
+  font-style: normal;
 }
 
 summary::-webkit-details-marker {

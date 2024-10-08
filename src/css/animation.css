@@ -1,0 +1,49 @@
+.js-fade {
+  opacity: 0;
+}
+
+.js-fade.is-inview {
+  opacity: 1;
+  transition: opacity var(--speed-normal);
+}
+
+.js-fade-up {
+  opacity: 0;
+  translate: 0 50px;
+}
+
+.js-fade-up.is-inview {
+  opacity: 1;
+  translate: 0;
+  transition:
+    opacity var(--speed-normal),
+    translate var(--speed-normal);
+}
+
+.js-fade-bottom {
+  opacity: 0;
+  translate: 0 -50px;
+}
+
+.js-fade-bottom.is-inview {
+  opacity: 1;
+  translate: 0;
+  transition:
+    opacity var(--speed-normal),
+    translate var(--speed-normal);
+}
+
+.animation-delay-normal {
+  /* stylelint-disable-next-line declaration-no-important */
+  transition-delay: var(--speed-normal) !important;
+}
+
+.animation-delay-slow {
+  /* stylelint-disable-next-line declaration-no-important */
+  transition-delay: var(--speed-slow) !important;
+}
+
+.animation-delay-over-slow {
+  /* stylelint-disable-next-line declaration-no-important */
+  transition-delay: var(--speed-over-slow) !important;
+}
