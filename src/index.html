@@ -20,25 +20,27 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon.png" />
     <!-- css/js -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" />
+    <link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&family=Noto+Sans+Thai+Looped:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&family=Noto+Sans+Thai+Looped:wght@700&display=swap" media="print" onload='this.media="all"' />
   </head>
 
   <body>
     <main class="l-main">
-      <section class="l-section">
-        <div class="l-section__inner">
+      <section class="l-section l-section--result">
+        <div class="l-section__inner l-section__inner--result">
           <h2 class="l-section__title"><img src="images/section-title.webp" alt="Simulation 3秒「節約」プチ体験"></h2>
-          <div class="l-section__profile">
-            <p class="l-section__profile-info">結果：<span>20歳</span><span>女性</span></p>
-          </div>
 
           <div class="l-section__result">
-            <div class="l-section__result-top">
+            <div class="l-section__profile">
+              <p class="l-section__profile-info">結果：<span>20歳</span><span>女性</span></p>
+            </div>
+            <div class="l-section__result-top js-fade animation-delay-normal">
               <div class="l-section__result">
                 <p class="l-section__result-age">あなたと同世代<span class="l-section__result-subtext">（00歳~00歳）</span></p>
                 <div class="l-section__result-insurance">
-                  <p class="l-section__result-insurance-label">平均年間保険料<small class="l-section__result-insurance-note">＊</small></p>
+                  <p class="l-section__result-insurance-label">平均年間保険料<sup class="l-section__result-insurance-note">＊</sup></p>
                   <p class="l-section__result-insurance-value"><em class="l-section__result-insurance-amount">214,000</em>円</p>
                 </div>
               </div>
@@ -54,13 +56,13 @@
               </div>
             </div>
 
-            <div class="l-section__result-triangle"></div>
+            <div class="l-section__result-triangle js-fade-bottom animation-delay-slow"></div>
 
-            <div class="l-section__result-bottom">
+            <div class="l-section__result-bottom js-fade animation-delay-over-slow">
               <div class="l-section__result-savings">
                 <p class="l-section__result-savings-label">年間</p>
                 <div class="l-section__result-savings-value">
-                  <em class="l-section__result-amount">165,664</em>
+                  <em class="l-section__result-amount js-count-number" data-count-to="165664" data-duration="1700">165,664</em>
                   <p class="l-section__result-currency">円</p>
                 </div>
               </div>
@@ -73,24 +75,21 @@
         </div>
       </section>
 
-      <section class="l-section">
+      <section class="l-section l-section--recommend">
         <div class="l-section__inner">
           <h3 class="l-section__middle-title">おすすめプランについて</h3>
-          <div class="l-section__content">
-            <p class="l-section__text">プランに含まれる商品</p>
-            <ul class="l-section__list">
-              <li class="l-section__item">医療保険</li>
-              <li class="l-section__item">ガン保険</li>
-              <li class="l-section__item">死亡保険(定期)</li>
-            </ul>
-          </div>
+
+          <picture class="l-section__content">
+            <source media="(min-width: 768px)" srcset="images/recommend-pc.webp">
+            <img src="images/recommend.webp" alt="プランに含まれる商品 医療保険:入院日額5,000円 ガン保険:診断一時金10万円 死亡保険:保険金額200万円">
+          </picture>
 
           <div class="l-section__summary">
-            <p class="l-section__text">3商品<br>まとめて</p>
+            <p class="l-section__text l-section__text--cicle">3商品<br>まとめて</p>
             <div class="l-section__price">
-              <p class="l-section__text">月々のお支払いはコレだけ！</p>
+              <p class="l-section__text l-section__text--point">月々のお支払いはコレだけ！</p>
               <div class="l-section__price-inner">
-                <em class="l-section__price-value">4,028</em>
+                <em class="l-section__price-value js-count-number" data-count-to="4028" data-duration="800">4,028</em>
                 <p class="l-section__price-unit">円</p>
               </div>
             </div>
@@ -105,11 +104,11 @@
         </div>
       </section>
       
-      <div class="l-notice">
-        <p class="l-notice__text">※見積もり体験で表示されているプランは保障内容の一部です。</p>
-        <p class="l-notice__text">※告知などによってプラン内容が異なる場合がございます。</p>
-        <p class="l-notice__text">※見積もり結果の保険料と平均の年間保険料について、保障内容が類似しているとは限りませんので、節約できる金額については目安としていただく数値です。お客様におかれましては、保険料以外の契約条件も十分にご検討下さい。</p>
-      </div>
+      <ul class="l-notice">
+        <li class="l-notice__text">※見積もり体験で表示されているプランは保障内容の一部です。</li>
+        <li class="l-notice__text">※告知などによってプラン内容が異なる場合がございます。</li>
+        <li class="l-notice__text">※見積もり結果の保険料と平均の年間保険料について、保障内容が類似しているとは限りませんので、節約できる金額については目安としていただく数値です。お客様におかれましては、保険料以外の契約条件も十分にご検討下さい。</li>
+      </ul>
     </main>
   </body>
 </html>
