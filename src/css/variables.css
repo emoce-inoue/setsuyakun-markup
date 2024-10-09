@@ -56,6 +56,6 @@
   /* motion time */
   --speed-quick: 0.3s;
   --speed-normal: 0.5s;
-  --speed-slow: 0.8s;
-  --speed-over-slow: 1.3s;
+  --speed-slow: 1.2s;
+  --speed-over-slow: 2s;
 }
