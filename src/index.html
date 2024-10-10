@@ -27,6 +27,56 @@
   </head>
 
   <body>
+    <header class="l-header">
+      <nav class="l-header__inner">
+        <h1 class="l-header__logo"><img src="images/logo.webp" alt="FINANCIAL AGENCY"></h1>
+        <ul class="l-header__menu-list">
+          <li><a href="" class="l-header__menu-link">お客様の声</a></li>
+          <li><a href="" class="l-header__menu-link">3秒節約プチ体験</a></li>
+          <li><a href="" class="l-header__menu-link">保デジの特徴</a></li>
+          <li><a href="" class="l-header__menu-link">サービスの流れ</a></li>
+          <li><a href="" class="l-header__menu-link">よくある質問</a></li>
+          <li><a href="" class="l-header__menu-link">お問い合わせ</a></li>
+        </ul>
+        <ul class="l-header__sns-list">
+          <li class="l-header__sns-item"><a href="" class="l-header__sns-link"><img src="images/ig-icon.webp" alt="インスタグラムのアイコン"></a></li>
+          <li class="l-header__sns-item"><a href="" class="l-header__sns-link"><img src="images/x-icon.webp" alt="X(旧ツイッター)のアイコン"></a></li>
+          <li class="l-header__sns-item"><a href="" class="l-header__sns-link"><img src="images/line-icon.webp" alt="LINEのアイコン"></a></li>
+        </ul>
+        <div class="l-header__hamburger">
+          <button type="button" aria-label="サイトメニューボタン" class="l-hamburger js-hamburger">
+            <span class="l-hamburger__line"></span>
+          </button>
+        </div>
+      </nav>
+      <dialog aria-label="折りたたみメニュー" autofocus="" data-active="false" id="js-drawer" class="l-drawer" open="">
+        <div class="l-drawer__header">
+          <p class="l-drawer__logo"><img src="images/logo.webp" alt="FINANCIAL AGENCY"></p>
+          <div class="l-drawer__close-button-wrapper"><button type="button" aria-label="メニューを閉じる" class="l-drawer__close-button js-drawer-close"></button></div>
+        </div>
+        <a href=""><img src="images/menu-more.webp" alt="3秒「節約」プチ体験 詳しくはこちら"></a>
+        <ul class="l-drawer__menu">
+          <li><a href="" class="l-drawer__menu-link">お客様の声</a></li>
+          <li><a href="" class="l-drawer__menu-link">3秒節約プチ体験</a></li>
+          <li><a href="" class="l-drawer__menu-link">保デジの特徴</a></li>
+          <li><a href="" class="l-drawer__menu-link">サービスの流れ</a></li>
+          <li><a href="" class="l-drawer__menu-link">よくある質問</a></li>
+          <li><a href="" class="l-drawer__menu-link">お問い合わせ</a></li>
+        </ul>
+        <div class="l-drawer__bottom">
+          <div class="l-drawer__external">
+            <a href="" class="l-drawer__external-link">企業公式ホームページ</a>
+            <a href="" class="l-drawer__external-link">保険見積もりサービス</a>
+          </div>
+          <ul class="l-drawer__sns-list">
+            <li class="l-drawer__sns-item"><a href="" class="l-header__sns-link"><img src="images/ig-icon.webp" alt="インスタグラムのアイコン"></a></li>
+            <li class="l-drawer__sns-item"><a href="" class="l-header__sns-link"><img src="images/x-icon.webp" alt="X(旧ツイッター)のアイコン"></a></li>
+            <li class="l-drawer__sns-item"><a href="" class="l-header__sns-link"><img src="images/line-icon.webp" alt="LINEのアイコン"></a></li>
+          </ul>
+          <p class="l-drawer__copy">COPYRIGHT © 2021 FINANCIAL AGENCY. All rights reserved.</p>
+        </div>
+      </dialog>
+    </header>
     <main class="l-main">
       <section class="l-section l-section--result">
         <div class="l-section__inner l-section__inner--result">
@@ -40,7 +90,7 @@
                 <span data-gender="female">女性</span>
               </p>
             </div>
-            <div class="l-section__result-top js-fade animation-delay-normal">
+            <div class="l-section__result-top js-fade">
               <div class="l-section__result">
                 <p class="l-section__result-age">
                   あなたと同世代
@@ -75,7 +125,7 @@
               </div>
             </div>
 
-            <div class="l-section__result-triangle js-fade-bottom animation-delay-slow"></div>
+            <div class="l-section__result-triangle js-fadein animation-delay-slow"></div>
 
             <div class="l-section__result-bottom js-fade animation-delay-over-slow">
               <div class="l-section__result-savings">

@@ -1,49 +1,69 @@
-.js-fade {
+.js-fade,
+.js-fadeup,
+.js-fadein {
   opacity: 0;
 }
 
 .js-fade.is-inview {
-  opacity: 1;
-  transition: opacity var(--speed-normal);
+  animation: fade 1s linear forwards;
 }
 
-.js-fade-up {
-  opacity: 0;
-  translate: 0 50px;
+.js-fadeup.is-inview {
+  animation: fadeup 1s ease-out forwards;
 }
 
-.js-fade-up.is-inview {
-  opacity: 1;
-  translate: 0;
-  transition:
-    opacity var(--speed-normal),
-    translate var(--speed-normal);
-}
-
-.js-fade-bottom {
-  opacity: 0;
-  translate: 0 -50px;
-}
-
-.js-fade-bottom.is-inview {
-  opacity: 1;
-  translate: 0;
-  transition:
-    opacity var(--speed-normal),
-    translate var(--speed-normal);
+.js-fadein.is-inview {
+  animation: fadein 1s ease-out forwards;
 }
 
 .animation-delay-normal {
   /* stylelint-disable-next-line declaration-no-important */
-  transition-delay: var(--speed-normal) !important;
+  animation-delay: var(--speed-normal) !important;
 }
 
 .animation-delay-slow {
   /* stylelint-disable-next-line declaration-no-important */
-  transition-delay: var(--speed-slow) !important;
+  animation-delay: var(--speed-slow) !important;
 }
 
 .animation-delay-over-slow {
   /* stylelint-disable-next-line declaration-no-important */
-  transition-delay: var(--speed-over-slow) !important;
+  animation-delay: var(--speed-over-slow) !important;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    translate: 0 -30px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+@keyframes fadeup {
+  0% {
+    opacity: 0;
+    translate: 0 50px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    translate: 0;
+  }
 }
