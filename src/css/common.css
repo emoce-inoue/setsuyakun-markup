@@ -7,8 +7,7 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: auto 1fr;
-  align-items: center;
-  justify-items: flex-end;
+  place-items: center end;
   padding-inline-start: 15px;
 }
 
