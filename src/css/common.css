@@ -3,6 +3,13 @@
   display: none;
 }
 
+.l-header {
+  position: sticky;
+  inset-block-start: 0;
+  background-color: var(--color-grayscale-0);
+  z-index: var(--default-z-index);
+}
+
 .l-header__inner {
   display: grid;
   grid-auto-flow: column;
