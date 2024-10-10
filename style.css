@@ -57,7 +57,7 @@
   /* motion time */
   --speed-quick: 0.3s;
   --speed-normal: 0.5s;
-  --speed-slow: 1.2s;
+  --speed-slow: 1s;
   --speed-over-slow: 2s;
 }
 
@@ -261,6 +261,13 @@ summary::-webkit-details-marker {
 .l-header__menu-list,
 .l-header__sns-list {
   display: none;
+}
+
+.l-header {
+  position: sticky;
+  inset-block-start: 0;
+  background-color: var(--color-grayscale-0);
+  z-index: var(--default-z-index);
 }
 
 .l-header__inner {
