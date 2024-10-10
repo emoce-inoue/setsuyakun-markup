@@ -130,7 +130,7 @@
 .l-section__result-savings-label {
   position: absolute;
   inset-inline-start: -10px;
-  inset-block-start: -20px;
+  inset-block-start: -25px;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -418,7 +418,8 @@
   }
 
   .l-section__result-savings-label {
-    inset-block-start: -40px;
+    inset-inline-start: -20px;
+    inset-block-start: -45px;
     inline-size: 98px;
     block-size: 98px;
     font-size: calc(30 * var(--rem-ratio));

@@ -34,6 +34,7 @@
 
   /* color */
   --color-grayscale-0: #fff;
+  --color-grayscale-100: #e8e8e8;
   --color-grayscale-1000: #000;
   --color-yellowscale-100: #fff6cc;
   --color-yellowscale-200: #fff1ac;
@@ -56,6 +57,6 @@
   /* motion time */
   --speed-quick: 0.3s;
   --speed-normal: 0.5s;
-  --speed-slow: 0.8s;
-  --speed-over-slow: 1.3s;
+  --speed-slow: 1.2s;
+  --speed-over-slow: 2s;
 }
